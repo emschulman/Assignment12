@@ -1,0 +1,284 @@
+/* Color Palette
+Navy #212f63
+Carolina Blue #a5dbde
+Light Carolina Blue #d7eced
+Yellow #f4b81a
+Light Yellow #fde9b6
+Green #95aa51
+----------------*/
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 6fr 2fr;
+	grid-template-rows: auto 5fr auto;
+	grid-gap: 10px;
+	font-family: Helvetica, sans-serif;
+}
+
+header {
+	grid-area: header;
+	grid-column: 1/4;
+	grid-row: 1/2;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.name {
+	font-family: 'Rock Salt', cursive;
+	font-size: 3rem;
+	text-align: center;
+	color: #212f63;
+}
+
+.name p {
+	margin: 0;
+}
+
+nav {
+	grid-area: navigation;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+nav ul {
+	list-style-type: none;
+	padding-left: 10px;
+	margin: 0;
+}
+
+
+nav a {
+	text-decoration: none;
+	color: #212f63;
+	padding: 10px 10px;
+	margin: 5px 0;
+	background-color: #f4b81a;
+	border-radius: 5px 15px;
+	display: inline-block;
+	width: 80%;
+	text-align: center;	
+}
+
+nav a:hover {
+	background-color: #212f63;
+	color: #f4b81a;
+}
+
+main {
+	grid-area: main;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	background-color: #f5f5f7;
+	/* display:grid; */
+	/* grid-template-columns: 1fr 1fr; */
+	/* grid-template-rows: 1fr 1fr; */
+}
+
+main p {
+	padding: 0 10px;
+}
+
+.profile-image {
+	width: 49%;
+}
+
+aside {
+	grid-area: sidebar;
+	grid-column: 3/4;
+	grid-row: 2/3;
+	background-color: #95aa51;
+}
+
+footer {
+	grid-area: footer;
+	grid-column: 1/4;
+	grid-row: 3/4;
+	text-align: center;
+	background-color: #212f63;
+	color: #FFF;
+}
+
+
+/* Contact Us Styles */
+
+.contact-form {
+	box-sizing: border-box;
+	background: #fde9b6;
+	padding: 10px 0;
+	<!-- max-width: 80%; -->
+	margin: 0 auto;
+	font: 0.9em Helvetica, sans-serif;
+}
+
+.contact-form ul {
+	list-style:none;
+	<!-- max-width: 98%; -->
+	padding: 0;
+	padding-inline-start: 0;
+}
+
+.form-fields {
+	margin: 0;
+}
+
+.contact-form li {
+	margin: 15px 0;
+	padding: 0 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form-fields label {
+	box-sizing: border-box;
+	flex: 1 0 60px;
+	font-size: 0.9em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.form-fields input, 
+.form-fields textarea, 
+.form-fields select,
+.form-fields option {
+	box-sizing: border-box;
+	background: #f5f5f7;
+	font: Helvetica, sans-serif;
+	max-height: 3em;
+	line-height: normal;
+	border: none;
+	overflow: hidden;
+	font-size: 0.9em;
+	padding-left: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	flex: 3 0 300px;
+}
+
+.form-fields button {
+	box-sizing: border-box;
+	background: #212f63;
+	color: white;
+	width: 30%;
+	font-weight: 400;
+	border: none;
+	padding: 6px 0;
+	border-radius: 30px;
+}
+
+@media (min-width: 441px) {
+	form.contact-form {
+		width: 80%;
+		margin: 0 auto;
+		padding: 0 auto;
+	}
+}
+
+
+
+@media (max-width: 1000px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		grid-template-rows: auto 4fr auto auto;
+		grid-gap: 10px;
+	}
+
+	header {
+		grid-area: header;
+		grid-column: 1/3;
+		grid-row: 1/2;
+	}
+
+	nav {
+		grid-area: navigation;
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	main {
+		grid-area: main;
+		grid-column: 2/3;
+		grid-row: 2/3;
+		background-color: #f5f5f7;
+	}
+
+	aside {
+		grid-area: sidebar;
+		grid-column: 1/3;
+		grid-row: 3/4;
+		background-color: #95aa51;
+	}
+
+	footer {
+		grid-area: footer;
+		grid-column: 1/3;
+		grid-row: 4/5;
+		text-align: center;
+		background-color: #212f63;
+		color: #FFF;
+	}	
+}
+
+@media (max-width: 603px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto 3fr auto auto;
+		grid-gap: 10px;
+	}
+
+	header {
+		grid-area: header;
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	nav {
+		grid-area: navigation;
+		grid-column: 1/2;
+		grid-row: 2/3;
+		margin-bottom: 0;
+		text-align: center;
+	}
+	
+	nav a {
+		margin: 0;
+	}
+	
+	nav li {
+		padding: 5px 0;
+	}
+	
+	/* nav ul { */
+		/* box-sizing:border-box; */
+		/* display: flex; */
+	/* } */
+	
+	/* nav li { */
+		/* flex: 1 0 60px; */
+		/* text-align: center; */
+	/* } */
+
+	main {
+		grid-area: main;
+		grid-column: 1/2;
+		grid-row: 3/4;
+		background-color: #f5f5f7;
+	}
+
+	aside {
+		grid-area: sidebar;
+		grid-column: 1/2;
+		grid-row: 4/5;
+		background-color: #95aa51;
+	}
+
+	footer {
+		grid-area: footer;
+		grid-column: 1/2;
+		grid-row: 5/6;
+		text-align: center;
+		background-color: #212f63;
+		color: #FFF;
+	}	
+}

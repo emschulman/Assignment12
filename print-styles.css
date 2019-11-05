@@ -1,0 +1,129 @@
+/* Color Palette
+Navy #212f63
+Carolina Blue #a5dbde
+Light Carolina Blue #d7eced
+Yellow #f4b81a
+Light Yellow #fde9b6
+Green #95aa51
+----------------*/
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 6fr 2fr;
+	grid-template-rows: auto 5fr auto;
+	grid-gap: 10px;
+	font-family: Helvetica, sans-serif;
+}
+
+header {
+	grid-area: header;
+	grid-column: 1/4;
+	grid-row: 1/2;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.name {
+	font-family: 'Rock Salt', cursive;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #212f63;
+}
+
+.name p {
+	margin: 0;
+}
+
+nav {
+	display: none;
+}
+
+main {
+	grid-area: main;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	background: white;
+}
+
+main img {
+	max-width: 150px;
+}
+
+aside {
+	display: none;
+}
+
+footer {
+	grid-area: footer;
+	grid-column: 1/4;
+	grid-row: 3/4;
+	text-align: center;
+	background: white;
+	color: #000;
+}
+
+
+/* Contact Us Styles */
+
+.contact-form {
+	box-sizing: border-box;
+	background: #fde9b6;
+	padding: 10px 0;
+	<!-- max-width: 80%; -->
+	margin: 0 auto;
+	font: 0.9em Helvetica, sans-serif;
+}
+
+.contact-form ul {
+	list-style:none;
+	padding: 0;
+	padding-inline-start: 0;
+}
+
+.form-fields {
+	margin: 0;
+}
+
+.contact-form li {
+	margin: 15px 0;
+	padding: 0 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form-fields label {
+	box-sizing: border-box;
+	flex: 1 0 100px;
+	font-size: 0.9em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.form-fields input, 
+.form-fields textarea, 
+.form-fields select,
+.form-fields option {
+	box-sizing: border-box;
+	background: #f5f5f7;
+	font: Helvetica, sans-serif;
+	max-height: 3em;
+	line-height: normal;
+	border: none;
+	overflow: hidden;
+	font-size: 0.9em;
+	padding-left: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	flex: 3 0 200px;
+}
+
+.form-fields button {
+	box-sizing: border-box;
+	background: white;
+	color: black;
+	width: 30%;
+	font-weight: 400;
+	border: none;
+	padding: 6px 0;
+	border-radius: 30px;
+}
